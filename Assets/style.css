@@ -56,5 +56,9 @@ p {
 }
 
 .hide {
-    
+    display: none;
+}
+
+.show {
+    background-color: white;
 }

@@ -29,3 +29,15 @@ var questions = [
     answer: "display"
     },
 ];
+
+for (var count = 0; count < questions.length; count++) {
+    var ul = document.createElement("ul");
+    var title = questions[count].title;
+    var main = document.querySelector("#main")
+    var choices = questions[count].choices;
+        for (var countB = 0; countB < choices.length; countB++) {
+            var li = document.createElement("li");
+            ul.append(li);
+        }
+    main.append(ul);
+}
