@@ -11,28 +11,27 @@
 <body>
     <header>
         <ul>
-            <button id="highscores">View Highscores</button>
-            <li id="timer">Timer:<span id="count">  </span></li>
+            <button id="highscores"><a style="text-decoration: none" href="highscores.html">View Highscores</a></button>
+            <button id="timer">Timer:<span id="count"> 0 </span></button>
         </ul>
     </header>
-    <div class="container">
-        <h1>Coding Quiz Challenge</h1>
+    <main id="main">
+        <div class="container">
+            <h1>Coding Quiz Challenge</h1>
 
-        <p>Try to answer the following coding-related questions within the time limit. 
-            Keep in mind that <br> incorrect answers will penalize score/time by 15 seconds! 
-        </p>
-        <div class="center" id="main">
-            <input type="button" value="Start Quiz!" id="startbutton" onclick="displayQuestions()"></input>
+            <p>Try to answer the following coding-related questions within the time limit. 
+                Keep in mind that <br> incorrect answers will penalize score/time by 15 seconds! 
+            </p>
+            <div class="center" id="main">
+                <input type="button" value="Start Quiz!" id="startbutton"></input>
+            </div>
         </div>
-    </div>
-    <div id="questionDisplay">
-
-    </div>
+    </main>
+    <div id="commentEl"></div>
 
 
-
-    <script src="Assets/script.js"></script>
     <script src="Assets/questions.js"> </script>
+    <script src="Assets/script.js"></script>
 
 </script>
 

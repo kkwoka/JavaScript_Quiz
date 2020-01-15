@@ -3,22 +3,30 @@ var secondsLeft = 75;
 var quizButton = document.querySelector("#startbutton");
 var mode = "show";
 var container = document.querySelector(".container");
-
+// var timerInterval;
 
 document.getElementById("startbutton").addEventListener("click", setTime);
-document.getElementById("startbutton").addEventListener("click", displayQuestions);
 
-function setTime() {
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.textContent = " " + secondsLeft;
+// function setTime() {
+//   var timerInterval = setInterval(function() {
+//     secondsLeft--;
+//     timeEl.textContent = " " + secondsLeft;
 
-    if(secondsLeft === 0) {
-      alert("Time's up!")
-    }
+//     if(secondsLeft <= 0) {
+//       clearInterval(timerInterval);
+//       timeEl.textContent = "0";
+//       rightWrong.innerHTML = "";
+//       alert("Time's up!");
+//       mainEl.innerHTML = "Thanks for playing! Refresh the page to try again.";
+//       mainEl.setAttribute("id", "loserScreen")
+//     }
 
-  }, 1000);
-}
+//   }, 1000);
+// }
+
+// function StopTime() {
+//   clearInterval(timerInterval);
+// }
 
 quizButton.addEventListener("click", function() {
   if (mode === "show") {
@@ -26,43 +34,13 @@ quizButton.addEventListener("click", function() {
     container.setAttribute("class", "hide");
   }
   else {
-    mode = "hide";
+    mode = "show";
     container.setAttribute("class", "show");
   }
+  renderQuestions0();
 });
 
-function displayQuestions() {
-  var questions = [
-    { 
-    title: "Commonly used data types DO NOT include:",
-    choices: ["strings", "booleans", "alerts", "numbers"],
-    answer: "alerts"
-    },
-  
-    {
-    title: "The condition in an if / else statement is enclosed within ____.",
-    choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
-    answer: "parentheses"
-    },
-  
-    {
-    title: "Which of the following is NOT a data type?",
-    choices: ["number", "string", "boolean", "NaN"],
-    answer: "NaN"
-    },
-  
-    {
-    title: "Which of the following is NOT a loop type?",
-    choices: ["for", "while", "circuit", "do-while"],
-    answer: "circuit"
-    },
-    
-    {
-    title: "What of the following is NOT a pop-up",
-    choices: ["alert", "display", "confirm", "prompt"],
-    answer: "display"
-    },
-  ];
-  var myJSON = JSON.stringify(questions);
-  document.querySelector("#questionDisplay").innerHTML = myJSON;
-}
+
+
+
+

@@ -1,15 +1,23 @@
-li {
-    list-style: none;
+body {
+    background-image: url("./cork-board/cork-board.png");
 }
 
-#highscores {
+main {
+    background-color: firebrick;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-bottom: 20px;
+}
+
+#highscores, #indexPage {
     position: fixed;
     top: 0;
     left: 0;
     margin-top: 20px;
     margin-left: 30px;
     border: none;
-    background-color: white;
+    background-color: yellow;
+    color: black;
     cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
@@ -22,12 +30,16 @@ li {
     margin-right: 50px;
     margin-top: 20px;
     font-family: 'Times New Roman', Times, serif;
+    border: none;
+    background-color: yellow;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 h1 {
     text-align: center;
     margin-top: 100px;
-
+    padding-top: 15px;
 }
 
 p {
@@ -42,12 +54,12 @@ p {
     cursor: pointer;
     font-size: 18px;
     line-height: 18px;
-    margin: 10px 10px 10px 20px;
+    margin-top: 50px;
     padding: 10px 30px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: purple;
+    background-color: darkblue;
     color: white;
 }
 
@@ -55,10 +67,55 @@ p {
     text-align: center;
 }
 
-.hide {
-    display: none;
+.hsDiv {
+    margin-top: 100px;
+    background-color: firebrick;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#loserScreen {
+    text-align: center;
+    font-size: 32px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 100px;
 }
 
-.show {
-    background-color: white;
+li {
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    list-style: decimal;
+    list-style-position: inside;
+}
+
+.highscoresCenter {
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    /* padding-left: -50px;
+    padding-right: -50px; */
+    text-align: center;
+    color: black;
+    padding-bottom: 15px;
+}
+
+button {
+    margin-right: 15px;
+}
+
+#inputInitialBox {
+    margin-left: 350px;
+    margin-right: 15px;
+}
+
+#commentEl {
+    text-align: center;
+    background-color: darkcyan;
+    color: antiquewhite;
+    margin-left: 200px;
+    margin-right: 200px;
 }
