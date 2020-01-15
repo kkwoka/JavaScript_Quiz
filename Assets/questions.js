@@ -286,7 +286,6 @@ function enterScore() {
         } else {
             rightWrong.innerHTML = "";
           localStorage.setItem("userInputInitials", userInputInitials);
-        //   setHighscore();
         }
 
         highscoreHeader.innerHTML = "Highscores:";
@@ -311,10 +310,8 @@ function enterScore() {
         highscoreDiv.append(startOverButton);
         mainEl.append(highscoreDiv);  
 
-        // startOverButton.addEventListener("click", function() {
-        //     setTime();
-        //     renderQuestions0();
-        // })
+        // var hslist = document.querySelector(".hsList");
+        // hslist.innerHTML = userInputInitials + " , " + secondsLeft;
     })
 }
 
@@ -322,6 +319,9 @@ function displayMessage(type, message) {
     rightWrong.textContent = message;
     rightWrong.setAttribute("class", type);
 }
+
+// var hslist = document.querySelector(".hsList");
+// hslist.innerHTML = userInputInitials + " , " + secondsLeft
 
 
 
