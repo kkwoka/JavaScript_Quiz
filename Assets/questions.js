@@ -65,10 +65,10 @@ function StopTime() {
 }
 // // ------------------------------------------------------------------------------------------------------------------------------
 
-// var highscoreButton1 = document.getElementById("highscores");
-// highscoreButton1.addEventListener("click", function() {
-//     alert("Must finish quiz before you may see the highscores!")
-// })
+var highscoreButton1 = document.getElementById("highscores");
+highscoreButton1.addEventListener("click", function() {
+    rightWrong.innerHTML = "Must finish quiz before you may see the highscores!"
+})
 
 // function stophighscoreButton1() {
 //     return highscoreButton1;
@@ -294,68 +294,78 @@ function enterScore() {
 
     sumbitButton.addEventListener("click", function() {
         userInputInitials = document.querySelector(".highscoreButtons").value;
+        console.log(userInputInitials)
+        console.log("kk breaks")
   
         if (userInputInitials === "") {
-            rightWrong.innerHTML = "";
-          displayMessage("error", "We can't register your score if you don't give initials!");
+            console.log(userInputInitials)
+            rightWrong.innerHTML = "We can't register your score if you don't give initials!";
+        //   alert("We can't register your score if you don't give initials!");
         } else {
+            console.log(userInputInitials)
             rightWrong.innerHTML = "";
           localStorage.setItem("userInputInitials", userInputInitials);
+          highscoreHeader.innerHTML = "Highscores:";
+          finalScoreTag.innerHTML = "";
+          finalP.innerHTML = "";
+          highscoreDiv.innerHTML = "";
+          rightWrong.innerHTML = "";
+          
+          var startOverButton = document.createElement("a");
+          startOverButton.setAttribute("id", "startOverButton");
+          startOverButton.setAttribute("href", "index.html");
+          startOverButton.textContent = "Start Over";
+  
+          var highscoreList = document.createElement("li");
+          highscoreList.setAttribute("id", "highscoreList");
+          highscoreList.innerHTML = userInputInitials + " , " + secondsLeft;
+          document.querySelector("#highscores").addEventListener("click", highscoreButton);
+  
+          highscoreDiv.append(highscoreHeader);
+          highscoreDiv.append(highscoreList); 
+          highscoreDiv.append(startOverButton);
+          mainEl.append(highscoreDiv);  
         }
 
-        highscoreHeader.innerHTML = "Highscores:";
-        finalScoreTag.innerHTML = "";
-        finalP.innerHTML = "";
-        highscoreDiv.innerHTML = "";
-        rightWrong.innerHTML = "";
-        
-        
-        var startOverButton = document.createElement("a");
-        startOverButton.setAttribute("id", "startOverButton");
-        startOverButton.setAttribute("href", "index.html");
-        startOverButton.textContent = "Start Over";
-
-        var highscoreList = document.createElement("li");
-        highscoreList.setAttribute("id", "highscoreList");
-        highscoreList.innerHTML = userInputInitials + " , " + secondsLeft;
-        document.querySelector("#highscores").addEventListener("click", highscoreButton);
-
-        highscoreDiv.append(highscoreHeader);
-        highscoreDiv.append(highscoreList); 
-        highscoreDiv.append(startOverButton);
-        mainEl.append(highscoreDiv);  
     })
 
     highscoreButton.addEventListener("click", function() {
-        mainEl.innerHTML = "";
-        rightWrong.innerHTML = "";
+        userInputInitials = document.querySelector(".highscoreButtons").value;
+        if (userInputInitials === "") {
+            console.log(userInputInitials)
+            rightWrong.innerHTML = "We can't register your score if you don't give initials!";
+        //   alert("We can't register your score if you don't give initials!");
+        } else {
+            mainEl.innerHTML = "";
+            rightWrong.innerHTML = "";
 
-        var highscoreDiv = document.createElement("div");
-        highscoreDiv.setAttribute("class", "highScoreCenter");
-        
-        var highscoreHeader = document.createElement("h1");
-        highscoreHeader.setAttribute("class", "highscoresCenter");
-        highscoreHeader.innerHTML = "Did you make the Highscore list?";
-        
-        var finalScoreTag = document.createElement("h2");
-        finalScoreTag.setAttribute("class", "highscoresCenter");
-        finalScoreTag.innerHTML = "Highscore Hall of Fame";
-        
-        var highscoreList = document.createElement("li");
-        highscoreList.setAttribute("id", "highscoreList");
-        highscoreList.innerHTML = userInputInitials + " , " + secondsLeft;
+            var highscoreDiv = document.createElement("div");
+            highscoreDiv.setAttribute("class", "highScoreCenter");
+            
+            var highscoreHeader = document.createElement("h1");
+            highscoreHeader.setAttribute("class", "highscoresCenter");
+            highscoreHeader.innerHTML = "Did you make the Highscore list?";
+            
+            var finalScoreTag = document.createElement("h2");
+            finalScoreTag.setAttribute("class", "highscoresCenter");
+            finalScoreTag.innerHTML = "Highscore Hall of Fame";
+            
+            var highscoreList = document.createElement("li");
+            highscoreList.setAttribute("id", "highscoreList");
+            highscoreList.innerHTML = userInputInitials + " , " + secondsLeft;
 
-        var startOverButton = document.createElement("a");
-        startOverButton.setAttribute("id", "startOverButton");
-        startOverButton.setAttribute("href", "index.html");
-        startOverButton.textContent = "Start Over";
+            var startOverButton = document.createElement("a");
+            startOverButton.setAttribute("id", "startOverButton");
+            startOverButton.setAttribute("href", "index.html");
+            startOverButton.textContent = "Start Over";
 
-        highscoreDiv.append(highscoreHeader);
-        highscoreDiv.append(finalScoreTag);
-        highscoreDiv.append(highscoreList);
-        highscoreDiv.append(startOverButton);
-        mainEl.append(highscoreDiv);
-    })
+            highscoreDiv.append(highscoreHeader);
+            highscoreDiv.append(finalScoreTag);
+            highscoreDiv.append(highscoreList);
+            highscoreDiv.append(startOverButton);
+            mainEl.append(highscoreDiv);
+        }
+        })
 }
 
 function displayMessage(type, message) {
