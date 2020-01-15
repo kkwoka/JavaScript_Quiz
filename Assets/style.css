@@ -5,8 +5,10 @@ body {
 main {
     background-color: firebrick;
     margin-left: 200px;
+    margin-top: 100px;
     margin-right: 200px;
     padding-bottom: 20px;
+    border: dashed whitesmoke;
 }
 
 #highscores, #indexPage {
@@ -38,7 +40,7 @@ main {
 
 h1 {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 50px;
     padding-top: 15px;
 }
 
@@ -54,7 +56,7 @@ p {
     cursor: pointer;
     font-size: 18px;
     line-height: 18px;
-    margin-top: 50px;
+    margin-bottom: 25px;
     padding: 10px 30px;
     text-align: center;
     margin-left: auto;
@@ -72,7 +74,10 @@ p {
     background-color: firebrick;
     margin-left: 200px;
     margin-right: 200px;
+    border: dashed whitesmoke;
+
 }
+
 #loserScreen {
     text-align: center;
     font-size: 32px;
@@ -103,14 +108,10 @@ li {
     padding-bottom: 15px;
 }
 
-button {
-    margin-right: 15px;
-}
-
-#inputInitialBox {
-    margin-left: 350px;
-    margin-right: 15px;
-}
+.highscoreButtons {
+    display: block;
+    margin: 0 auto;
+} 
 
 #commentEl {
     text-align: center;
@@ -118,4 +119,18 @@ button {
     color: antiquewhite;
     margin-left: 200px;
     margin-right: 200px;
+}
+
+#highscoreList {
+    text-align: center;
+    color: white !important;
+    cursor: default !important;
+}
+
+#startOverButton {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    color:yellow;
 }

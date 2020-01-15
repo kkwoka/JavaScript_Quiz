@@ -15,6 +15,18 @@ User can take a multiple choice, timed, code quiz.
 
   * When time runs out and/or all questions are answered, the user is presented with their final score and asked to enter their initials. Their final score and initials are then stored in `localStorage`.
 
+## Included Files
+* index.html
+* highscores.html
+* README.md
+* Assets/
+    * questions.js
+    * script.js
+    * style.css
+    * Assets/cork-board
+        * cork-board.png
+        * readme.txt
+
 
 ## Deployable Link
 

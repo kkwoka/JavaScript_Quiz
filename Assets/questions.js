@@ -41,6 +41,8 @@ var rightWrong = document.querySelector("#commentEl");
 var timerInterval;
 
 function setTime() {
+    timeEl.textContent = "";
+    secondsLeft = 75;
      timerInterval = setInterval(function() {
       secondsLeft--;
       timeEl.textContent = " " + secondsLeft;
@@ -253,38 +255,74 @@ function enterScore() {
     
     var finalScoreTag = document.createElement("h2");
     finalScoreTag.setAttribute("class", "highscoresCenter");
-    finalScoreTag.innerHTML = "Your Final Score Is: ";
+    finalScoreTag.innerHTML = "Your Final Score Is: " + secondsLeft;
     
+    var finalP = document.createElement("p");
+    finalP.setAttribute("class", "highscoresCenter");
+    finalP.innerHTML = "To secure your fame, enter your initials below, then click the \"Submit\" button.";
+
     var initialBox = document.createElement("input");
-    initialBox.setAttribute("id", "inputInitialBox");
+    initialBox.setAttribute("class", "highscoreButtons");
     initialBox.value = "Enter Initials";
 
     var sumbitButton = document.createElement("button");
-    sumbitButton.setAttribute("class", "button");
+    sumbitButton.setAttribute("class", "highscoreButtons");
     sumbitButton.innerHTML = "Submit";
 
-    var clearButton = document.createElement("button");
-    clearButton.setAttribute("class", "button");
-    clearButton.innerHTML = "Clear Highscores";
 
     highscoreDiv.append(highscoreHeader);
     highscoreDiv.append(finalScoreTag);
+    highscoreDiv.append(finalP);
     highscoreDiv.append(initialBox);
     highscoreDiv.append(sumbitButton);
-    highscoreDiv.append(clearButton);
     mainEl.append(highscoreDiv);
 
-    // if (initialBox !== "undefined") {
-    //     localStorage.setItem(initialBox.value);
-    //     document.querySelector(".hsList").innerHTML = localStorage.getItem(initialBox.value);
-    // }
+    sumbitButton.addEventListener("click", function() {
+        var userInputInitials = document.querySelector(".highscoreButtons").value;
+  
+        if (userInputInitials === "") {
+            rightWrong.innerHTML = "";
+          displayMessage("error", "We can't register your score if you don't give initials!");
+        } else {
+            rightWrong.innerHTML = "";
+          localStorage.setItem("userInputInitials", userInputInitials);
+        //   setHighscore();
+        }
+
+        highscoreHeader.innerHTML = "Highscores:";
+        finalScoreTag.innerHTML = "";
+        finalP.innerHTML = "";
+        highscoreDiv.innerHTML = "";
+        rightWrong.innerHTML = "";
+        
+        
+        var startOverButton = document.createElement("a");
+        startOverButton.setAttribute("id", "startOverButton");
+        startOverButton.setAttribute("href", "index.html");
+
+        startOverButton.textContent = "Start Over";
+
+        var highscoreList = document.createElement("li");
+        highscoreList.setAttribute("id", "highscoreList");
+        highscoreList.innerHTML = userInputInitials + " , " + secondsLeft;
+
+        highscoreDiv.append(highscoreHeader);
+        highscoreDiv.append(highscoreList); 
+        highscoreDiv.append(startOverButton);
+        mainEl.append(highscoreDiv);  
+
+        // startOverButton.addEventListener("click", function() {
+        //     setTime();
+        //     renderQuestions0();
+        // })
+    })
 }
 
+function displayMessage(type, message) {
+    rightWrong.textContent = message;
+    rightWrong.setAttribute("class", type);
+}
 
-// pause timer
-// function pauseTimer() {
-//     clearInterval(timerInterval);
-// }
 
 
 // function clickAnswers() {
