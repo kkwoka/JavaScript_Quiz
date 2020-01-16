@@ -48,8 +48,8 @@ function setTime() {
       timeEl.textContent = " " + secondsLeft;
   
       if(secondsLeft <= 0) {
-        clearInterval(timerInterval);
         timeEl.textContent = "0";
+        clearInterval(timerInterval);
         rightWrong.innerHTML = "";
         alert("Time's up!");
         mainEl.innerHTML = "Thanks for playing! Refresh the page to try again.";
@@ -300,31 +300,30 @@ function enterScore() {
         if (userInputInitials === "") {
             console.log(userInputInitials)
             rightWrong.innerHTML = "We can't register your score if you don't give initials!";
-        //   alert("We can't register your score if you don't give initials!");
         } else {
             console.log(userInputInitials)
-            rightWrong.innerHTML = "";
-          localStorage.setItem("userInputInitials", userInputInitials);
-          highscoreHeader.innerHTML = "Highscores:";
-          finalScoreTag.innerHTML = "";
-          finalP.innerHTML = "";
-          highscoreDiv.innerHTML = "";
-          rightWrong.innerHTML = "";
+            rightWrong.innerHTML = "Submitted highscore successfully! Click \"View Highscores\".";
+            localStorage.setItem("userInputInitials", userInputInitials);
+        //   highscoreHeader.innerHTML = "Highscores:";
+        //   finalScoreTag.innerHTML = "";
+        //   finalP.innerHTML = "";
+        //   highscoreDiv.innerHTML = "";
+        //   rightWrong.innerHTML = "";
           
-          var startOverButton = document.createElement("a");
-          startOverButton.setAttribute("id", "startOverButton");
-          startOverButton.setAttribute("href", "index.html");
-          startOverButton.textContent = "Start Over";
+        //   var startOverButton = document.createElement("a");
+        //   startOverButton.setAttribute("id", "startOverButton");
+        //   startOverButton.setAttribute("href", "index.html");
+        //   startOverButton.textContent = "Start Over";
   
-          var highscoreList = document.createElement("li");
-          highscoreList.setAttribute("id", "highscoreList");
-          highscoreList.innerHTML = userInputInitials + " , " + secondsLeft;
-          document.querySelector("#highscores").addEventListener("click", highscoreButton);
+        //   var highscoreList = document.createElement("li");
+        //   highscoreList.setAttribute("id", "highscoreList");
+        //   highscoreList.innerHTML = userInputInitials + " , " + secondsLeft;
+        //   document.querySelector("#highscores").addEventListener("click", highscoreButton);
   
-          highscoreDiv.append(highscoreHeader);
-          highscoreDiv.append(highscoreList); 
-          highscoreDiv.append(startOverButton);
-          mainEl.append(highscoreDiv);  
+        //   highscoreDiv.append(highscoreHeader);
+        //   highscoreDiv.append(highscoreList); 
+        //   highscoreDiv.append(startOverButton);
+        //   mainEl.append(highscoreDiv);  
         }
 
     })
