@@ -17,7 +17,6 @@ User can take a multiple choice, timed, code quiz.
 
 ## Included Files
 * index.html
-* highscores.html
 * README.md
 * Assets/
     * questions.js
