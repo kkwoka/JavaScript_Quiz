@@ -4,9 +4,10 @@ body {
 
 main {
     background-color: firebrick;
-    margin-left: 200px;
+    margin: 0 auto;
+    margin-left: 100px;
     margin-top: 100px;
-    margin-right: 200px;
+    margin-right: 100px;
     padding-bottom: 20px;
     border: dashed whitesmoke;
 }
@@ -117,8 +118,8 @@ li {
     text-align: center;
     background-color: darkcyan;
     color: antiquewhite;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 #highscoreList {

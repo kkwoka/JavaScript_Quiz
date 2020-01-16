@@ -70,9 +70,6 @@ highscoreButton1.addEventListener("click", function() {
     rightWrong.innerHTML = "Must finish quiz before you may see the highscores!"
 })
 
-// function stophighscoreButton1() {
-//     return highscoreButton1;
-// }
 // ------------------------------------------------------------------------------------------------------------------------------
 
 var renderQuestions0 = function() {
@@ -304,28 +301,7 @@ function enterScore() {
             console.log(userInputInitials)
             rightWrong.innerHTML = "Submitted highscore successfully! Click \"View Highscores\".";
             localStorage.setItem("userInputInitials", userInputInitials);
-        //   highscoreHeader.innerHTML = "Highscores:";
-        //   finalScoreTag.innerHTML = "";
-        //   finalP.innerHTML = "";
-        //   highscoreDiv.innerHTML = "";
-        //   rightWrong.innerHTML = "";
-          
-        //   var startOverButton = document.createElement("a");
-        //   startOverButton.setAttribute("id", "startOverButton");
-        //   startOverButton.setAttribute("href", "index.html");
-        //   startOverButton.textContent = "Start Over";
-  
-        //   var highscoreList = document.createElement("li");
-        //   highscoreList.setAttribute("id", "highscoreList");
-        //   highscoreList.innerHTML = userInputInitials + " , " + secondsLeft;
-        //   document.querySelector("#highscores").addEventListener("click", highscoreButton);
-  
-        //   highscoreDiv.append(highscoreHeader);
-        //   highscoreDiv.append(highscoreList); 
-        //   highscoreDiv.append(startOverButton);
-        //   mainEl.append(highscoreDiv);  
         }
-
     })
 
     highscoreButton.addEventListener("click", function() {
@@ -333,7 +309,6 @@ function enterScore() {
         if (userInputInitials === "") {
             console.log(userInputInitials)
             rightWrong.innerHTML = "We can't register your score if you don't give initials!";
-        //   alert("We can't register your score if you don't give initials!");
         } else {
             mainEl.innerHTML = "";
             rightWrong.innerHTML = "";
