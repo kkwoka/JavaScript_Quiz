@@ -55,13 +55,13 @@ var renderQuestions = function() {
     var choices = questions[i].choices;
     var h1 = document.createElement("h1");
     var ul = document.createElement("ul");
-    rightWrong.innerHTML = "We'll let you know how you're doing along the way!";
+    // rightWrong.innerHTML = "We'll let you know how you're doing along the way!";
     h1.textContent = title;
     var rightAnswer = question.answer;
 
     for (k = 0; k < choices.length; k++) {
         var li = document.createElement("li");
-        li.setAttribute("data-answer", question.answer);
+        li.setAttribute("data-answer", rightAnswer);
         currentLI = choices[k];
         li.innerHTML = currentLI;
         ul.append(li);
