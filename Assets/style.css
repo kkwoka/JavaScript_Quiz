@@ -1,17 +1,17 @@
 body {
-    background-image: url("./cork-board/cork-board.png");
+    background-image: url("./sakura/sakura.png");
 }
 
 main {
-    background-color: firebrick;
+    /* background-color: lightgray; */
     margin: 0 auto;
     margin-left: 100px;
     margin-top: 100px;
     margin-right: 100px;
     padding-bottom: 20px;
-    border: dashed whitesmoke;
-    border-radius: 20px 20px 0px 0px;
-    box-shadow: 10px 10px 15px rgba(33,33,33,.7);
+    /* border: dashed whitesmoke; */
+    /* border-radius: 20px 20px 0px 0px; */
+    /* box-shadow: 10px 10px 15px rgba(33,33,33,.7); */
     /* transform: rotate(3deg); */
 }
 
@@ -79,7 +79,6 @@ p {
     margin-left: 200px;
     margin-right: 200px;
     border: dashed whitesmoke;
-
 }
 
 #loserScreen {
@@ -115,13 +114,13 @@ li {
 
 #commentEl {
     text-align: center;
-    background-color: darkcyan;
+    /* background-color: darkcyan; */
     color: antiquewhite;
     margin-left: 100px;
     margin-right: 100px;
     padding: 5px;
-    border-radius: 0px 0px 10px 10px;
-    box-shadow: 10px 10px 15px rgba(33,33,33,.7);
+    /* border-radius: 0px 0px 10px 10px; */
+    /* box-shadow: 10px 10px 15px rgba(33,33,33,.7); */
     /* transform: rotate(3deg); */
 }
 
