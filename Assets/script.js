@@ -21,7 +21,7 @@ function setTime() {
       timeEl.textContent = " " + secondsLeft;
   
       if(secondsLeft <= 0) {
-        timeEl.textContent = "0";
+        timeEl.textContent = " 0";
         clearInterval(timerInterval);
         rightWrong.innerHTML = "";
         alert("Time's up!");
@@ -152,6 +152,7 @@ function enterScore() {
             var highscoreHeader = document.createElement("h1");
             var finalScoreTag = document.createElement("h2");
             var highscoreList = document.createElement("li");
+            var StartOverDiv = document.createElement("div");
             var startOverButton = document.createElement("a");
 
 
@@ -162,11 +163,14 @@ function enterScore() {
             finalScoreTag.innerHTML = "Highscore Hall of Fame";
             highscoreList.setAttribute("id", "highscoreList");
             highscoreList.innerHTML = userInputInitials + " , " + secondsLeft;
+            StartOverDiv.setAttribute("class", "center");
             startOverButton.setAttribute("id", "startOverButton");
             startOverButton.setAttribute("href", "index.html");
             startOverButton.textContent = "Start Over";
 
-            highscoreDiv.append(highscoreHeader, finalScoreTag, highscoreList, startOverButton);
+            StartOverDiv.append(startOverButton);
+            highscoreDiv.append(highscoreHeader, finalScoreTag, highscoreList);
+            highscoreDiv.append(StartOverDiv);
             mainEl.append(highscoreDiv);
         }
     })

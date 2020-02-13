@@ -3,16 +3,8 @@ body {
 }
 
 main {
-    /* background-color: lightgray; */
-    margin: 0 auto;
-    margin-left: 100px;
     margin-top: 100px;
-    margin-right: 100px;
     padding-bottom: 20px;
-    /* border: dashed whitesmoke; */
-    /* border-radius: 20px 20px 0px 0px; */
-    /* box-shadow: 10px 10px 15px rgba(33,33,33,.7); */
-    /* transform: rotate(3deg); */
 }
 
 #highscores, #indexPage {
@@ -21,7 +13,7 @@ main {
     left: 0;
     margin-top: 20px;
     margin-left: 30px;
-    border: none;
+    border: 2px solid black;
     background-color: yellow;
     color: black;
     cursor: pointer;
@@ -36,8 +28,8 @@ main {
     margin-right: 50px;
     margin-top: 20px;
     font-family: 'Times New Roman', Times, serif;
-    border: none;
-    background-color: yellow;
+    border: 2px solid black;
+    background-color: rgb(254,241,236);
     cursor: default;
     font-size: 16px;
 }
@@ -46,6 +38,10 @@ h1 {
     text-align: center;
     margin-top: 50px;
     padding-top: 15px;
+}
+
+ul {
+    padding: 0px;
 }
 
 p {
@@ -63,8 +59,6 @@ p {
     margin-bottom: 25px;
     padding: 10px 30px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     background-color: darkblue;
     color: white;
 }
@@ -73,13 +67,15 @@ p {
     text-align: center;
 }
 
+
+/* 
 .hsDiv {
     margin-top: 100px;
     background-color: firebrick;
     margin-left: 200px;
     margin-right: 200px;
     border: dashed whitesmoke;
-}
+} */
 
 #loserScreen {
     text-align: center;
@@ -91,12 +87,11 @@ p {
 
 li {
     cursor: pointer;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 18px;
     margin: 0 auto;
     padding: 10px;
-    text-align: center;
-    color: white;
+    color: brown;
     list-style: decimal;
     list-style-position: inside;
 }
@@ -114,26 +109,30 @@ li {
 
 #commentEl {
     text-align: center;
-    /* background-color: darkcyan; */
-    color: antiquewhite;
-    margin-left: 100px;
-    margin-right: 100px;
+    color: grey;
+    font-weight:bold;
+    /* margin-left: 100px;
+    margin-right: 100px; */
     padding: 5px;
-    /* border-radius: 0px 0px 10px 10px; */
-    /* box-shadow: 10px 10px 15px rgba(33,33,33,.7); */
-    /* transform: rotate(3deg); */
 }
 
 #highscoreList {
     text-align: center;
-    color: white !important;
+    color: grey !important;
     cursor: default !important;
 }
 
 #startOverButton {
     display: block;
     text-align: center;
-    padding: 5px;
     text-decoration: none;
-    color:yellow;
+    background-color: darkblue;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 25px;
+    padding: 10px 30px;
+    width: 400px;
+    
 }
