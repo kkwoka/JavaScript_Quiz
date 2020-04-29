@@ -154,7 +154,6 @@ function enterScore() {
             var StartOverDiv = document.createElement("div");
             var startOverButton = document.createElement("a");
 
-
             highscoreDiv.setAttribute("class", "highScoreCenter");
             highscoreHeader.setAttribute("class", "highscoresCenter");
             highscoreHeader.innerHTML = "Did you make the Highscore list?";
