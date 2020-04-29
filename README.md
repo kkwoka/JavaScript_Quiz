@@ -35,6 +35,7 @@ https://kkwoka.github.io/JavaScript_Quiz/
 
 
 ## Questions
+​
 <img src="https://avatars3.githubusercontent.com/u/57764303?v=4" alt="avatar" style="border-radius: 16px" width="30" />
 ​
 If you have any questions about the repo, contact [kkwoka](https://github.com/kkwoka).
