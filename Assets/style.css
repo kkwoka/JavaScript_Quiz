@@ -67,16 +67,6 @@ p {
     text-align: center;
 }
 
-
-/* 
-.hsDiv {
-    margin-top: 100px;
-    background-color: firebrick;
-    margin-left: 200px;
-    margin-right: 200px;
-    border: dashed whitesmoke;
-} */
-
 #loserScreen {
     text-align: center;
     font-size: 32px;
@@ -111,8 +101,6 @@ li {
     text-align: center;
     color: grey;
     font-weight:bold;
-    /* margin-left: 100px;
-    margin-right: 100px; */
     padding: 5px;
 }
 
@@ -123,7 +111,6 @@ li {
 }
 
 #startOverButton {
-    display: block;
     text-align: center;
     text-decoration: none;
     background-color: darkblue;
@@ -133,6 +120,9 @@ li {
     line-height: 18px;
     margin-bottom: 25px;
     padding: 10px 30px;
-    width: 400px;
-    
+    width: 400px;   
+}
+
+.center {
+    margin: 10px;
 }
