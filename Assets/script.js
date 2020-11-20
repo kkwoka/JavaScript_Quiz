@@ -1,42 +1,55 @@
-var timeEl = document.querySelector("#count");
+// Initialiing variables
 var secondsLeft = 75;
-var quizButton = document.querySelector("#startbutton");
-var highscoreButton1 = document.getElementById("highscores");
-var mainEl = document.querySelector("#main");
 var i = 0;
 var k = 0;
 var question = questions[i];
 var title = questions[i].title;
 var choices = questions[i].choices;
-var commentEl = document.querySelector("#commentEl");
 var timerInterval;
 
+// telling program what certain buttons / elements are
+var timeEl = document.querySelector("#count");
+var quizButton = document.querySelector("#startbutton");
+var highscoreButton1 = document.getElementById("highscores");
+var mainEl = document.querySelector("#main");
+var commentEl = document.querySelector("#commentEl");
+
+// Adding the setTime function to the Start Button
 document.getElementById("startbutton").addEventListener("click", setTime);
 
+// Countdown timer
 function setTime() {
     timeEl.textContent = "";
     secondsLeft = 75;
     timerInterval = setInterval(function() {
+      // decrements counter
       secondsLeft--;
+      // shows new time on screen
       timeEl.textContent = " " + secondsLeft;
   
+      // when user makes a mistake, it subtracts 15 seconds, so the secondsLeft could go below 0 potentially
+      // if <=0, hardcode a 0 on the screen (don't want to see negative numbers)
       if(secondsLeft <= 0) {
         timeEl.textContent = " 0";
         clearInterval(timerInterval);
         commentEl.innerHTML = "";
+        // pop up alert
         alert("Time's up!");
         mainEl.innerHTML = "Thanks for playing! Refresh the page to try again.";
+        // setting new attributes
         mainEl.setAttribute("id", "loserScreen")
       }
-    }, 1000);
+    }, 1000); // repeats every one second 
 }
 
 function StopTime() {
     clearInterval(timerInterval);
 }
 
+// adding click listener to start button
 quizButton.addEventListener("click", function() {
     mainEl.innerHTML = "";
+    // dynamically creating new elements
     var h1 = document.createElement("h1");
     var ul = document.createElement("ul");
     commentEl.innerHTML = "We'll let you know how you're doing along the way!";
